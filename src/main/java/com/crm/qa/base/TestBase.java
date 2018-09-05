@@ -24,7 +24,7 @@ public class TestBase {
 		
 		try {
 			prop = new Properties();
-				FileInputStream ip = new FileInputStream("/home/sbv6/Desktop/Soumya/eclipse_workspace/FreeCRMTest/src/main/java/com/crm/qa/cofig/config.properties");
+				FileInputStream ip = new FileInputStream("D:\Repositories\FREECRM\src\main\java\com\crm\qa\cofig\config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -38,11 +38,11 @@ public class TestBase {
 		String browsername=prop.getProperty("browser");
 		if(browsername.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver",
-					"//home//sbv6//Downloads//chromedriver");
+					"D:\Repositories\SFM_POM\src\main\java\com\sfm\centerpoint\browsers\chromedriver.exe");
 			driver = new ChromeDriver();
 		}else if (browsername.equals("chrome")) {
 			System.setProperty("webdriver.gecko.driver",
-					"/home/sbv6/Downloads/geckodriver");
+					"D:\Repositories\SFM_POM\src\main\java\com\sfm\centerpoint\browsers\geckodriver");
 			driver = new FirefoxDriver();
 			
 		}
